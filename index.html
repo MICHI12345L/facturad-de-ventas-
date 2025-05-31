@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Sale</title>
+<!--41-link de sitio SweetAlert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="./css/stylos.css">
+<link rel="stylesheet" href=".//js/js.js">
+</head>
+<body>
+    <center>
+        
+            <h1>FACTURA DE VENTAS PEDIDOS</h1>
+            <form action="" method="post">
+                <table> <caption>PEDIDOS</caption><tr>
+                <th>NOMBRE DEL CLIENTE</th><td>
+                <input type="text" size="20"></td><th>TIPO DOCUMENTO</th><th>
+                        <select name="tipodoc" id="tp">
+                            <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="NIT">NIT</option>
+                            </select>
+                            </th>
+                        <th>No. Documento
+                    <td>
+                    <input text="text" name="ndoc" id="" siza="25">
+                    </td>
+                </th>
+            </td>
+        </tr>
+        <tr>
+            <th>DIRECCIÓN</th><td><input type="text" name="dir" id="" size="20"></td>
+            <th>TELEFONO</th><td><input type="text" name="tel" id="" siza="20"></td>
+            <th>VENDEDOR
+            <td><input type="text" name="vend" id="" size="20"></td>
+            </th>
+
+        </tr>
+        <!-- Sección detealle de pedido -->
+         <tr>
+            <th>REFERENCIA</th>
+            <th colspan="2">DESCRIPCIÓN</th>
+            <th>CANTIDAD</th>
+            <th>VALOR UNITARIO</th>
+            <th>SUBTOTAL</th>
+        </tr>
+        <!-- Sección de selección de comidas a pedir -->
+        <tr>
+        <th><select name="" id="prod1" onchange="mostrar()">
+            <option>Seleccionar:</option>
+            <option value="25000">Combo hamburguesa</option>
+            <option value="0000">Combo perro caliente</option>
+            <option value="35000">Combo pizza</option>
+        </select></th>
+        <th colspan="2"><input type="text" name="" id="desc01" size="40"></th>
+        <th><input type="number" name="" id="cant01" size="10"></th>
+        <th><input type="number" name="" id="vau01" size="15" disabled></th>
+        <th><input type="text" name="" id="vate1" size="15" disabled></th>
+
+        </tr>
+        <tr>
+        <th><select name="" id="prod2" onchange="mostrar()">
+        <option>Seleccionar:</option>
+        <option value="25000">Combo hamburguesa</option>
+        <option value="20000">Combo perro caliente</option>
+        <option value="35000">Combo pizza</option>
+        </select></th>
+        <th colspan="2"><input type="text" name="" id="desc02" size="40"></th>
+        <th><input type="number" name="" id="cant02" size="10"></th>
+        <th><input type="number" name="" id="vau02" size="15" disabled></th>
+        <th><input type="text" name="" id="vat02" size="15" disabled></th>
+        </tr>
+        <tr>
+        <th><select name="" id="prod3" onchange="mostrar()">
+            <option>Seleccionar:</option>
+            <option value="25000">Combo hamburguesa</option>
+            <option value="20000">Combo perro caliente</option>
+            <option value="35000">Combo pizza</option>
+        </select></th>
+        <th colspan="2"><input type="text" name="" id="desc03" size="40"></th>
+        <th><input type="number" name="" id="cant03" size="10"></th>
+        <th><input type="number" name="" id="vau03" size="15" disabled></th>
+        <th><input type="text" name="" id="vat03" size="15" disabled></th>
+        </tr>
+
+        <!-- Sección de adicionales -->
+        <tr>
+        <th colspan="6">ADICIONALES</th>
+        </tr>
+        <tr>
+            <th colspan="2" rowspan="2"><img src="https://licoreslarebaja.com/155-large_default/cerveza-budweiser-lata-x-6un.jpg" alt=""><input type="checkbox" name="adic" id="checkbox1"></img>Cerveza en lata</th> <th colspan="2" rowspan="2"><img src="https://plus.unsplash.com/premium_photo-1690440686714-c06a56a1511c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVsYWRvfGVufDB8fDB8fHww" alt=""><input type="checkbox" name="adic" id="checkbox2"></img>Helado sundae</th>
+            <th colspan="2" rowspan="2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBgIBqJtr7YNQ-S8XUXv3bOLvEpVIpEBu2Q&s" alt=""><input type="checkbox" name="adic" id="checkbox3"></img>Jugo HIT</th>
+        </tr>
+        <!-- Sección de liquidación de la factura -->
+        <tr></tr>
+        <tr>
+            <th colspan="4">TOTAL DE ADICIONALES</th>
+            <th colspan="2"><input type="text" name="" id="adice" disabled></th>
+        </tr>
+
+        <tr>
+            <th colspan="2"> FORMA DE PAGO</th>
+            <th colspan="2">
+            <input type="radio" name="fp" id="radio1"> Efectivo <br>
+            <input type="radio" name="fp" id="radio2"> Nequi <br>
+            <input type="radio" name="" id="radio3">tarjetas</th>
+            <th>SUBTOTAL</th><td><input type="text" name="" id="subt" siza="25" disabled></td>
+        </tr>
+
+        <tr>
+            <th colspan="4" rowspan="3">OBSERVACIONES: Revise su pedido al entregarlo y GRACIASPOR SU COMPRA</th>
+            <th>IVA</th><td><input type="text" name="" id="iva" siza="25" disabled></td>
+        </tr>
+        <tr>
+            <th>DESCUENTO</th>
+            <td><input type="text" name="" id="desc" size="25" disabled></td>
+        </tr>
+        <tr>
+            <th>NETO</th>
+            <td><input type="text" name="" id="neto" size="25" disabled></td>
+        </tr>
+
+        <tr>
+            <th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar()"></th>
+            <th colspan="2"><input type="reset" value="BORRAR"></th>
+            <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar()"></th>
+        </tr>
+        </table>
+
+</form>
+
+</center>
+
+</body>
+
+</html>
